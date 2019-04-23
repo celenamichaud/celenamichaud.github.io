@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Celena's Web Site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="stylesheets/style-sheet-cm.css"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/responsive-tabs.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+</style>
+<script type="text/javascript"> document.documentElement.className = 'js';</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+jQuery( document ).ready( function( $ ) {
+
+	var $menu = $('#menu'),
+	  $menulink = $('.menu-link'),
+	  $menuTrigger = $('.has-submenu > a');
+
+	$menulink.click(function(e) {
+		e.preventDefault();
+		$menulink.toggleClass('active');
+		$menu.toggleClass('active');
+	});
+
+	$menuTrigger.click(function(e) {
+		e.preventDefault();
+		var $this = $(this);
+		$this.toggleClass('active').next('ul').toggleClass('active');
+	});
+
+});
+</script>
+<script>
+$(document).ready(function() {
+	window.scrollTo(0, 1);
+	$('.js #menu-toggle').click(function (e) {
+		$('body').toggleClass('active');
+		e.preventDefault();
+    });
+});
+</script>
+</head>
+
+<body><!-- there is a default background.gif file in the CSS file. You can turn that off by deleting that part-->
+	<div class="rowcenter" id="toprowdiv"><!-- An id can have any name you want-->
+		<!-- each box will allocate it's size from how many boxes in the row.The cells in the row are ALWAYS left justified-->
+
+		<!--#include virtual="includes/top-header.html" -->
+		<p> Select a location from the menus below to find accessibility information,
+<br> or select "Accessibility Report" to report an issue on campus.
+</p><!--the include command above is where you put the static templates but leave the arrow!dashdash#etc there. Its not a comment. -seems confusing i know-->
+			<!--you may have to test this include on github as it only works with Apache servers.-->
+	</div>
+		<div class="clearfix"></div><!--we clear the settings so we can start a new major row-->
+	<!--This section is for my navigation bar-->
+	<div class="rowcenter" id="nav-row">
+	<header class="example-header ">
+
+		<a class="menu-link" href="#menu">Full<br>Menu</a>
+			<div class="clearfix"></div>
+		<nav id="menu" class="menu">
+			<ul><!-- level 1-->
+	        	<li><a href="index.html">Home</a></li>
+					<li class="has-submenu"><a href="#">About Us <i class="fa fa-angle-down"></i></a>
+	        		<ul class="sub-menu">
+						<li><a href="https://drc.uga.edu/content_page/hours-and-location">Hours and Location</a></li>
+						<li><a href="https://drc.uga.edu/contact_page">Faculty</a></li>
+
+	        		</ul>
+	        	</li>
+	        	<li class="has-submenu"><a href="#">Student Links <i class="fa fa-angle-down"></i></a>
+	        		<ul class="sub-menu">
+	        			 <li class="has-submenu">
+	        				<li><a href="https://teton.accessiblelearning.com/UGA">AIM Student Home</a></li>
+						<li><a href="https://drc.uga.edu/content_page/register-for-services">Register for Services </a></li>
+							</li>
+	        		</ul>
+	        	</li>
+	<li class="has-submenu"><a href="#" >Libraries<i class="fa fa-angle-down"></i></a>
+	        <ul class="sub-menu">
+	        <li><a href="">Law Annex</a></li>
+			<li><a href="">Repository</a></li>
+				<li><a href="">Main</a></li>
+				<li><a href="">Russell Special Collections</a></li>
+				<li><a href="Science Library.html">Science</a></li>
+				</ul></li>
+
+
+	        		<!-- end level 2 ul kodak sublinks-->
+	        	<!-- end level 1 li for kodak nav -->
+	        	<li class="has-submenu"><a href="#">Residence Halls<i class="fa fa-angle-down"></i></a>
+	        		<ul class="sub-menu">
+							<li><a href="">Creswell</a></li>
+							<li><a href="">Russell</a></li>
+						<li><a href="">Brumby</a></li>
+							<li class="has-submenu">
+								<a href="#">Myers Community<i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+								<ul class="sub-menu">
+	        			 		<li><a href="">Mary Lyndon Hall</a></li>
+								<li><a href="Myers Hall.html">Myers Hall</a></li>
+								<li><a href="">Rutherford Hall</a></li>
+								<li><a href="">Soule Hall</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">University Village<i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+								<ul class="sub-menu">
+	        			 		<li><a href="">Brandon Oaks</a></li>
+								<li><a href="">Rogers Road</a></li>
+								<li><a href="">University Village</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">East Campus Village<i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+	        			 		<li><a href="">Busbee Hall</a></li>
+								<li><a href="">McWhorter Hall</a></li>
+								<li><a href="">Rooker Hall</a></li>
+								<li><a href="">Vandiver Hall</a></li>
+								</ul></li>
+								<li class="has-submenu">
+								<a href="#">Hill   <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+	        			 		<li><a href="">Boggs Hall</a></li>
+								<li><a href="">Church Hall</a></li>
+								<li><a href="">Hill Hall</a></li>
+								<li><a href="">Mell Hall</a></li>
+								<li><a href="">Lipscomb Hall</a></li>
+								<li><a href="">Oglethorpe House</a></li>
+								</ul></li>
+								<li class="has-submenu">
+								<a href="#">Health Sciences   <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+	        			 		<li><a href="">Brown Hall</a></li>
+								<li><a href="">Kenny Road</a></li>
+								<li><a href="">McGowan Road</a></li>
+							</ul></li>
+							<li class="has-submenu">
+								<a href="#">Reed   <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+	        			 		<li><a href="">Building 1516</a></li>
+								<li><a href="">Morris Hall</a></li>
+								<li><a href="">Payne Hall</a></li>
+								<li><a href="">Reed Hall</a></li>
+							</ul>
+							</li>
+
+					</ul>
+	        	</li>
+	        	<li class="has-submenu"><a href="#">Lecture Halls <i class="fa fa-angle-down"></i></a>
+	        		<ul class="sub-menu">
+						<li class="has-submenu">
+								<a href="#">A-E <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+	        			 		<li><a href="">A</a></li>
+								<li><a href="">B</a></li>
+								<li><a href="">C</a></li>
+								<li><a href="">D</a></li>
+								<li><a href="">E</a></li>
+							</ul></li>
+							<li class="has-submenu">
+								<a href="#">F-J   <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+	        			 		<li><a href="">F</a></li>
+								<li><a href="">G</a></li>
+								<li><a href="">H</a></li>
+								<li><a href="">I</a></li>
+								<li><a href="">J</a></li>
+								</ul>	</li>
+							<li class="has-submenu">
+								<a href="#">K-O   <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+								<li><a href="">K</a></li>
+								<li><a href="">L</a></li>
+								<li><a href="">M</a></li>
+								<li><a href="">N</a></li>
+								<li><a href="">O</a></li>
+								</ul>	</li>
+									<li class="has-submenu">
+								<a href="#">P-T   <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+								<li><a href="">P</a></li>
+								<li><a href="">Q</a></li>
+								<li><a href="">R</a></li>
+								<li><a href="">S</a></li>
+								<li><a href="">T</a></li>
+								</ul>	</li>
+							<li class="has-submenu">
+								<a href="#">U-Z   <i class="fa fa-chevron-right fa-fw" style="font-size:11px"></i></a>
+							<ul class="sub-menu">
+								<li><a href="">U</a></li>
+								<li><a href="">V</a></li>
+								<li><a href="">W</a></li>
+							</ul>	</li>
+
+					</ul>
+	        	</li>
+				<li class="has-submenu"><a href="#">Resource Buildings <i class="fa fa-angle-down"></i></a>
+	        		<ul class="sub-menu">
+							<li><a href="">Administration</a></li>
+							<li><a href="">Auxiliary</a></li>
+							<li><a href="">Bolton Commons</a></li>
+							<li><a href="">Bursar's Office</a></li>
+							<li><a href="">Chapel</a></li>
+							<li><a href="">Family Housing Office</a></li>
+							<li><a href="">GA Museum of Art</a></li>
+							<li><a href="">Human Resources</a></li>
+							<li><a href="">ECV Summit</a></li>
+							<li><a href="">Miller Learning Center</a></li>
+							<li><a href="">Snelling Commons</a></li>
+							<li><a href="">O House Commons</a></li>
+							<li><a href="">Niche Commons</a></li>
+					</ul>
+	        	</li>
+
+
+				<li><a href="information.html">Accessibility Report</a></li>
+	        </ul>
+		</nav> <!--END NAVIGATION BAR-->
+	</header>
+</div> <!--END NAVIGATION DIV-->
+	<div class="clearfix"></div>
+<p></p>
+	<div class="rowcenter" id="main-3-columns-of-web-page">
+		<div class="navbox_160showHide " id="left-nav-holder-box">
+			<p>
+				<!--put a pretty picture or text here, <em>REMEMBER</em> it will disappear on an <strong>iphone</strong></p>
+			<p>pull the corner of your browser screen IN to see how it works--></p>
+			<!--<em> for italics, <strong>for bold text-->
+
+		</div>
+<div class="main-section" id="main-section-page"><!--this is where your main content goes-->
+		<div class="divTable">
+			<div class="divTableRow">
+				<div class="divTableCell">
+					<p>Hello World!</p>
+					<p> I have a fancy center box <br> with shadows in the corner for a <br>3D effect</p>
+					<!-- the <br> automatically "breaks" the line on the page-->
+					<!--you can change the color of the box in the CSS file. Just change #326D87 to another hexidecimal color.Note you have to change it in several places in the file. -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+
+				<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong>. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
+
+					<p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit</em>. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. <strong>Fusce ac turpis quis ligula lacinia aliquet</strong>. Vestibulum sapien. Proin quam. </p>
+				<!--class=book is used to make the paragraphs look like "book style" pages-->
+				<p class="book">Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. <em>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</em>. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. <strong>Ut fringilla</strong>. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. <b>Vestibulum sapien</b>. Morbi in ipsum sit amet pede facilisis laoreet. <strong>Suspendisse in justo eu magna luctus suscipit</strong>. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. </p>
+				</div>
+			</div>
+	<div class="divTableRow">
+		<div class="divTableCell"><img src="images/uga-mascot.jpg" style="width: 136px;height: 131px" alt="mascot">
+		</div>
+		<div class="divTableCell">
+			<p class="book">Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. <b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui</b>. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. </p>
+		</div>
+	</div>
+	<div class="divTableRow">
+	<div class="divTableCell">
+		<div class="lefty"><!--this is how you list items. Note the 120 means indent 120 pixels -from the css file-->
+			<ul class="indent120">
+				<li>list item 1</li>
+				<li>list item two</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+			<div class="divTableRow">
+				<div class="divTableCell">
+				</div>
+			</div>
+		</div> <!--END DIVTABLE-->
+			</div>
+		<div class="rightbox_160showHide" id="right-popular-box">
+			<!--put the image in the same folder, and change the name here. you can adjust the size by changing the pixels-->
+		</div>
+
+	</div>
+</body>
+</html>
